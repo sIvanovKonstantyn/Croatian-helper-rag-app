@@ -1,0 +1,17 @@
+spring:
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        initialize-schema: true
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-3.5-turbo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
